@@ -1,72 +1,72 @@
-  // Synthwave Alpha Theme Color Palette
+// Synthwave Alpha Theme Color Palette
 
-  // Red
-$red-light : #e60a70;
-$red-dark  : #9a0048;
+// Red
+$red-light: #e60a70;
+$red-dark: #9a0048;
 
-  // Pink
-$pink-light : #ff00f6;
-$pink-dark  : #b300ad;
+// Pink
+$pink-light: #ff00f6;
+$pink-dark: #b300ad;
 
-  // Purple
-$purple-light : #aa54f9;
-$purple-dark  : #6e29ad;
+// Purple
+$purple-light: #aa54f9;
+$purple-dark: #6e29ad;
 
-  // Blue
-$blue-light : #00fbfd;
-$blue-dark  : #00b0b1;
+// Blue
+$blue-light: #55a8fb;
+$blue-dark: #2a6daf;
 
-  // Teal
-$teal-light : #00fbfd;
-$teal-dark  : #00b0b1;
+// Teal
+$teal-light: #00fbfd;
+$teal-dark: #00b0b1;
 
-  // Green
-$green-light : #0ae4a4;
-$green-dark  : #00986c;
+// Green
+$green-light: #0ae4a4;
+$green-dark: #00986c;
 
-  // Yellow
-$yellow-light : #f9f972;
-$yellow-dark  : #adad3e;
+// Yellow
+$yellow-light: #f9f972;
+$yellow-dark: #adad3e;
 
-  // Orange
-$orange-light : #ef9f76;
-$orange-dark  : #fe640b;
+// Orange
+$orange-light: #ef9f76;
+$orange-dark: #fe640b;
 
-  // Grey
-$grey-050 : #b6a5cc;
-$grey-100 : #ac98c5;
-$grey-150 : #a18cbe;
-$grey-200 : #977fb7;
-$grey-250 : #8d73b0;
-$grey-300 : #8366a9;
-$grey-350 : #795ba1;
-$grey-400 : #6f5394;
-$grey-450 : #664c88;
-$grey-500 : #5c457b;
-$grey-550 : #533e6f;
-$grey-600 : #4a3762;
-$grey-650 : #403056;
-$grey-700 : #372949;
-$grey-750 : #2d223d;
-$grey-800 : #241b30;
-$grey-850 : #1b1423;
-$grey-900 : #110d17;
-$grey-950 : #08060a;
+// Grey
+$grey-050: #b6a5cc;
+$grey-100: #ac98c5;
+$grey-150: #a18cbe;
+$grey-200: #977fb7;
+$grey-250: #8d73b0;
+$grey-300: #8366a9;
+$grey-350: #795ba1;
+$grey-400: #6f5394;
+$grey-450: #664c88;
+$grey-500: #5c457b;
+$grey-550: #533e6f;
+$grey-600: #4a3762;
+$grey-650: #403056;
+$grey-700: #372949;
+$grey-750: #2d223d;
+$grey-800: #241b30;
+$grey-850: #1b1423;
+$grey-900: #110d17;
+$grey-950: #08060a;
 
-  // White
-$white : #f2f2e3;
+// White
+$white: #f2f2e3;
 
-  // Black
-$black : #241b30;
+// Black
+$black: #241b30;
 
-  // Button
-$button-close : if($variant == "light", $red-dark, $red-light);
-$button-max   : if($variant == "light", $green-dark, $green-light);
-$button-min   : if($variant == "light", $yellow-dark, $yellow-light);
+// Button
+$button-close: if($variant == "light", $red-dark, $red-light);
+$button-max: if($variant == "light", $green-dark, $green-light);
+$button-min: if($variant == "light", $yellow-dark, $yellow-light);
 
-  // Link
-$links : if($variant == "light", $blue-light, $blue-dark);
+// Link
+$links: if($variant == "light", $blue-light, $blue-dark);
 
-  // Theme
-$default-light : $blue-light;
-$default-dark  : $blue-dark;
+// Theme
+$default-light: $blue-light;
+$default-dark: $blue-dark;
