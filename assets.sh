@@ -275,8 +275,8 @@ make_assets() {
       theme_color_light='#e60a70'
       ;;
     -Orange)
-      theme_color_dark='#fe640b'
-      theme_color_light='#ef9f76'
+      theme_color_dark='#a45743'
+      theme_color_light='#f08271'
       ;;
     -Yellow)
       theme_color_dark='#adad3e'
@@ -291,8 +291,8 @@ make_assets() {
       theme_color_light='#00fbfd'
       ;;
     -Grey)
-      theme_color_dark='#5c5f77'
-      theme_color_light='#ccd0da'
+      theme_color_dark='#50495a'
+      theme_color_light='#f2f2e3'
       ;;
     esac
   fi

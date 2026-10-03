@@ -28,30 +28,30 @@ $green-dark: #00986c;
 $yellow-light: #f9f972;
 $yellow-dark: #adad3e;
 
-// Orange
-$orange-light: #ef9f76;
-$orange-dark: #fe640b;
+// Orange (blend of Synthwave Alpha red + yellow)
+$orange-light: #f08271;
+$orange-dark: #a45743;
 
-// Grey
-$grey-050: #b6a5cc;
-$grey-100: #ac98c5;
-$grey-150: #a18cbe;
-$grey-200: #977fb7;
-$grey-250: #8d73b0;
-$grey-300: #8366a9;
-$grey-350: #795ba1;
-$grey-400: #6f5394;
-$grey-450: #664c88;
-$grey-500: #5c457b;
-$grey-550: #533e6f;
-$grey-600: #4a3762;
-$grey-650: #403056;
-$grey-700: #372949;
-$grey-750: #2d223d;
-$grey-800: #241b30;
-$grey-850: #1b1423;
-$grey-900: #110d17;
-$grey-950: #08060a;
+// Grey (Synthwave Alpha WHITE ramp -> interpolated -> BLACK ramp)
+$grey-050: #fdfdfa;
+$grey-100: #fafaf4;
+$grey-150: #f6f6ec;
+$grey-200: #f2f2e3;
+$grey-250: #b9b1bc;
+$grey-300: #7f7094;
+$grey-350: #786a8b;
+$grey-400: #706381;
+$grey-450: #685d77;
+$grey-500: #60566e;
+$grey-550: #585064;
+$grey-600: #50495a;
+$grey-650: #3a3245;
+$grey-700: #241b30;
+$grey-750: #1a1322;
+$grey-800: #0f0b14;
+$grey-850: #0f0b14;
+$grey-900: #0f0b14;
+$grey-950: #0f0b14;
 
 // White
 $white: #f2f2e3;
