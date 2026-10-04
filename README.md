@@ -40,6 +40,11 @@ Run the following commands in the terminal:
 -c, --color VARIANT...  Specify color variant(s) [standard|light|dark] (Default: All variants)
 -s, --size VARIANT...   Specify size variant [standard|compact] (Default: standard variant)
 
+> The `standard` color variant ships both light and dark in a single theme: its
+> `gtk.css` is the light palette and its `gtk-dark.css` is the dark palette, so
+> GTK (and tools that read both sheets, like `theme-sync`) can switch between
+> them. `light` and `dark` produce single-palette themes instead.
+
 -l, --libadwaita        Install specify gtk-4.0 theme into config folder ($HOME/.config/gtk-4.0) for all gtk4 apps use this theme
                         Default ColorSchemes theme will follow the system style (light/dark mode switch), all ColorSchemes versions not support this !
                         Options for default ColorSchemes:
