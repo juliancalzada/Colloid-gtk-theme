@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 for theme in '' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Teal' '-Grey'; do
   for color in '' '-Dark'; do
-    for type in '' '-Nord' '-Dracula' '-Gruvbox' '-Everforest' '-Catppuccin'; do
+    for type in '' '-Nord' '-Dracula' '-Gruvbox' '-Everforest' '-Catppuccin' '-Synthwave'; do
       if [[ "$color" == '' ]]; then
         case "$theme" in
           '')
@@ -197,6 +197,39 @@ for theme in '' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Teal' '-
               ;;
           esac
         fi
+
+        if [[ "$type" == '-Synthwave' ]]; then
+          background_color='#f2f2e3'
+          case "$theme" in
+            '')
+              theme_color='#2a6daf'
+              ;;
+            -Purple)
+              theme_color='#6e29ad'
+              ;;
+            -Pink)
+              theme_color='#b300ad'
+              ;;
+            -Red)
+              theme_color='#9a0048'
+              ;;
+            -Orange)
+              theme_color='#a45743'
+              ;;
+            -Yellow)
+              theme_color='#adad3e'
+              ;;
+            -Green)
+              theme_color='#00986c'
+              ;;
+            -Teal)
+              theme_color='#00b0b1'
+              ;;
+            -Grey)
+              theme_color='#50495a'
+              ;;
+          esac
+        fi
       else
         case "$theme" in
           '')
@@ -388,6 +421,39 @@ for theme in '' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Teal' '-
               ;;
             -Grey)
               theme_color='#ccd0da'
+              ;;
+          esac
+        fi
+
+        if [[ "$type" == '-Synthwave' ]]; then
+          background_color='#241b30'
+          case "$theme" in
+            '')
+              theme_color='#55a8fb'
+              ;;
+            -Purple)
+              theme_color='#aa54f9'
+              ;;
+            -Pink)
+              theme_color='#ff00f6'
+              ;;
+            -Red)
+              theme_color='#e60a70'
+              ;;
+            -Orange)
+              theme_color='#f08271'
+              ;;
+            -Yellow)
+              theme_color='#f9f972'
+              ;;
+            -Green)
+              theme_color='#0ae4a4'
+              ;;
+            -Teal)
+              theme_color='#00fbfd'
+              ;;
+            -Grey)
+              theme_color='#f2f2e3'
               ;;
           esac
         fi

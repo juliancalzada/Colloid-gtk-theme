@@ -452,9 +452,7 @@ make_assets() {
   cp -r "${SRC_DIR}/assets/gtk/symbolics/"*'.svg'                               "${THEME_DIR}/gtk-4.0/assets"
 
   cp -r "${SRC_DIR}/assets/gtk-2.0/assets-common${ELSE_DARK:-}"                              "${THEME_DIR}/gtk-2.0/assets"
-  local GTK2_ASSETS="${SRC_DIR}/assets/gtk-2.0/assets${theme}${ELSE_DARK:-}${scheme}"
-  [[ -d "${GTK2_ASSETS}" ]] || GTK2_ASSETS="${SRC_DIR}/assets/gtk-2.0/assets${theme}${ELSE_DARK:-}"
-  cp -r "${GTK2_ASSETS}/"*"png" "${THEME_DIR}/gtk-2.0/assets"
+  cp -r "${SRC_DIR}/assets/gtk-2.0/assets${theme}${ELSE_DARK:-}${scheme}/"*"png"             "${THEME_DIR}/gtk-2.0/assets"
 
   cp -r "${SRC_DIR}/assets/metacity-1/assets${window}"                                       "${THEME_DIR}/metacity-1/assets"
   cp -r "${SRC_DIR}/assets/metacity-1/thumbnail${ELSE_DARK:-}.png"                           "${THEME_DIR}/metacity-1/thumbnail.png"
