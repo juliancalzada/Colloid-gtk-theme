@@ -1,0 +1,72 @@
+// Synthwave Alpha Theme Color Palette
+
+// Red
+$red-light: #e60a70;
+$red-dark: #9a0048;
+
+// Pink
+$pink-light: #ff00f6;
+$pink-dark: #b300ad;
+
+// Purple
+$purple-light: #aa54f9;
+$purple-dark: #6e29ad;
+
+// Blue
+$blue-light: #55a8fb;
+$blue-dark: #2a6daf;
+
+// Teal
+$teal-light: #00fbfd;
+$teal-dark: #00b0b1;
+
+// Green
+$green-light: #0ae4a4;
+$green-dark: #00986c;
+
+// Yellow
+$yellow-light: #f9f972;
+$yellow-dark: #adad3e;
+
+// Orange (blend of Synthwave Alpha red + yellow)
+$orange-light: #f08271;
+$orange-dark: #a45743;
+
+// Grey (Synthwave Alpha WHITE ramp -> interpolated -> BLACK ramp)
+$grey-050: #fdfdfa;
+$grey-100: #fafaf4;
+$grey-150: #f6f6ec;
+$grey-200: #f2f2e3;
+$grey-250: #b9b1bc;
+$grey-300: #7f7094;
+$grey-350: #786a8b;
+$grey-400: #706381;
+$grey-450: #685d77;
+$grey-500: #60566e;
+$grey-550: #585064;
+$grey-600: #50495a;
+$grey-650: #3a3245;
+$grey-700: #241b30;
+$grey-750: #1a1322;
+$grey-800: #0f0b14;
+$grey-850: #0f0b14;
+$grey-900: #0f0b14;
+$grey-950: #0f0b14;
+
+// White
+$white: #f2f2e3;
+
+// Black
+$black: #241b30;
+
+// Button
+$button-close: if($variant == "light", $red-dark, $red-light);
+$button-max: if($variant == "light", $green-dark, $green-light);
+$button-min: if($variant == "light", $yellow-dark, $yellow-light);
+
+// Link
+$links: if($variant == "light", $blue-light, $blue-dark);
+
+// Theme
+$default-light: $blue-light;
+$default-dark: $blue-dark;

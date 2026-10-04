@@ -31,7 +31,7 @@ SASSC_OPT="-M -t expanded"
 
 THEME_NAME=Colloid
 THEME_VARIANTS=('' '-Purple' '-Pink' '-Red' '-Orange' '-Yellow' '-Green' '-Teal' '-Grey')
-SCHEME_VARIANTS=('' '-Nord' '-Dracula' '-Gruvbox' '-Everforest' '-Catppuccin')
+SCHEME_VARIANTS=('' '-Nord' '-Dracula' '-Gruvbox' '-Everforest' '-Catppuccin' '-Synthwave')
 COLOR_VARIANTS=('' '-Light' '-Dark')
 SIZE_VARIANTS=('' '-Compact')
 
@@ -82,7 +82,7 @@ OPTIONS:
                           2. fixed                       Using fixed theme colors (that will break light/dark mode switch)
 
   --tweaks                Specify versions for tweaks
-                          1. [nord|dracula|gruvbox|everforest|catppuccin|all]  (Nord/Dracula/Gruvbox/Everforest/Catppuccin/all) ColorSchemes version
+                          1. [nord|dracula|gruvbox|everforest|catppuccin|synthwave|all]  (Nord/Dracula/Gruvbox/Everforest/Catppuccin/Synthwave/all) ColorSchemes version
                           2. black                       Blackness color version
                           3. rimless                     Remove the 1px border about windows and menus
                           4. normal                      Normal windows button style like gnome default theme (titlebuttons: max/min/close)
@@ -151,7 +151,7 @@ install() {
 
   mkdir -p                                                                                   "${THEME_DIR}/metacity-1"
   cp -r "${SRC_DIR}/main/metacity-1/metacity-theme-3${window}.xml"                           "${THEME_DIR}/metacity-1/metacity-theme-3.xml"
-  cd "${THEME_DIR}/metacity-1" && ln -sf metacity-theme-3.xml metacity-theme-1.xml && ln -sf metacity-theme-3.xml metacity-theme-2.xml
+  ( cd "${THEME_DIR}/metacity-1" && ln -sf metacity-theme-3.xml metacity-theme-1.xml && ln -sf metacity-theme-3.xml metacity-theme-2.xml )
 
   mkdir -p                                                                                   "${THEME_DIR}/xfwm4"
   cp -r "${SRC_DIR}/main/xfwm4/themerc"                                                      "${THEME_DIR}/xfwm4/themerc"
@@ -367,6 +367,12 @@ while [[ $# -gt 0 ]]; do
             echo -e "\nCatppuccin ColorScheme version! ..."
             shift
             ;;
+          synthwave)
+            colorscheme='true'
+            schemes+=("${SCHEME_VARIANTS[6]}")
+            echo -e "\nSynthwave Alpha ColorScheme version! ..."
+            shift
+            ;;
           all)
             colorscheme='true'
             schemes+=("${SCHEME_VARIANTS[@]}")
@@ -488,6 +494,9 @@ color_schemes() {
         ;;
       -Catppuccin)
         scheme_color='catppuccin'
+        ;;
+      -Synthwave)
+        scheme_color='synthwave'
         ;;
     esac
     sed -i "/\@import/s/color-palette-default/color-palette-${scheme_color}/" "${SRC_DIR}/sass/_tweaks-temp.scss"

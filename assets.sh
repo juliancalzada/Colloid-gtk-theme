@@ -256,6 +256,47 @@ make_assets() {
     esac
   fi
 
+  if [[ "$scheme" == '-Synthwave' ]]; then
+    case "$theme" in
+    '')
+      theme_color_dark='#2a6daf'
+      theme_color_light='#55a8fb'
+      ;;
+    -Purple)
+      theme_color_dark='#6e29ad'
+      theme_color_light='#aa54f9'
+      ;;
+    -Pink)
+      theme_color_dark='#b300ad'
+      theme_color_light='#ff00f6'
+      ;;
+    -Red)
+      theme_color_dark='#9a0048'
+      theme_color_light='#e60a70'
+      ;;
+    -Orange)
+      theme_color_dark='#a45743'
+      theme_color_light='#f08271'
+      ;;
+    -Yellow)
+      theme_color_dark='#adad3e'
+      theme_color_light='#f9f972'
+      ;;
+    -Green)
+      theme_color_dark='#00986c'
+      theme_color_light='#0ae4a4'
+      ;;
+    -Teal)
+      theme_color_dark='#00b0b1'
+      theme_color_light='#00fbfd'
+      ;;
+    -Grey)
+      theme_color_dark='#50495a'
+      theme_color_light='#f2f2e3'
+      ;;
+    esac
+  fi
+
   if [[ "$blackness" == 'true' ]]; then
     case "$scheme" in
       '')
@@ -299,6 +340,14 @@ make_assets() {
         background_darker='#1e1e2e'
         titlebar_light='#e6e9ef'
         titlebar_dark='#11111b'
+        ;;
+      -Synthwave)
+        background_light='#241b30'
+        background_dark='#1a1322'
+        background_darker='#0f0b14'
+        background_dark_alt='#50495a'
+        titlebar_light='#241b30'
+        titlebar_dark='#1a1322'
         ;;
     esac
   else
@@ -344,6 +393,14 @@ make_assets() {
         background_darker='#303446'
         titlebar_light='#e6e9ef'
         titlebar_dark='#24273a'
+        ;;
+      -Synthwave)
+        background_light='#7f7094'
+        background_dark='#241b30'
+        background_darker='#1a1322'
+        background_dark_alt='#3a3245'
+        titlebar_light='#7f7094'
+        titlebar_dark='#241b30'
         ;;
     esac
   fi
@@ -463,6 +520,17 @@ make_assets() {
         button_close="#ff9c9e"
         button_max="#b6cf8f"
         button_min="#eacb8e"
+      fi
+      ;;
+    -Synthwave)
+      if [[ "$color" == '-Light' ]]; then
+        button_close="#9a0048"
+        button_max="#00986c"
+        button_min="#adad3e"
+      else
+        button_close="#e60a70"
+        button_max="#0ae4a4"
+        button_min="#f9f972"
       fi
       ;;
   esac
