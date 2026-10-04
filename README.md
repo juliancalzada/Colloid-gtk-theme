@@ -39,7 +39,6 @@ Run the following commands in the terminal:
 -t, --theme VARIANT...  Specify theme color variant(s) [default|purple|pink|red|orange|yellow|green|teal|grey|all] (Default: blue)
 -c, --color VARIANT...  Specify color variant(s) [standard|light|dark] (Default: All variants)
 -s, --size VARIANT...   Specify size variant [standard|compact] (Default: standard variant)
-
 -l, --libadwaita        Install specify gtk-4.0 theme into config folder ($HOME/.config/gtk-4.0) for all gtk4 apps use this theme
                         Default ColorSchemes theme will follow the system style (light/dark mode switch), all ColorSchemes versions not support this !
                         Options for default ColorSchemes:
@@ -60,6 +59,13 @@ Run the following commands in the terminal:
 ```
 
 > For more information, run: `./install.sh --help`
+
+> **Color variants:** `standard` ships both light and dark in a single
+> theme: its `gtk.css` is the light palette and its `gtk-dark.css` is the
+> dark palette, so GTK (and tools that read both sheets, like `theme-sync`)
+> can switch between them. `light` and `dark` are single-palette instead -
+> both `gtk.css` and `gtk-dark.css` use the requested palette, so the theme
+> renders that way regardless of the system light/dark preference.
 
 ### Fix for Libadwaita
 

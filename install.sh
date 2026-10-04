@@ -140,11 +140,11 @@ install() {
 
   mkdir -p                                                                                   "${THEME_DIR}/gtk-3.0"
   sassc $SASSC_OPT "${SRC_DIR}/main/gtk-3.0/gtk${color}.scss"                                "${THEME_DIR}/gtk-3.0/gtk.css"
-  sassc $SASSC_OPT "${SRC_DIR}/main/gtk-3.0/gtk-Dark.scss"                                   "${THEME_DIR}/gtk-3.0/gtk-dark.css"
+  sassc $SASSC_OPT "${SRC_DIR}/main/gtk-3.0/gtk${color:--Dark}.scss"                         "${THEME_DIR}/gtk-3.0/gtk-dark.css"
 
   mkdir -p                                                                                   "${THEME_DIR}/gtk-4.0"
   sassc $SASSC_OPT "${SRC_DIR}/main/gtk-4.0/gtk${color}.scss"                                "${THEME_DIR}/gtk-4.0/gtk.css"
-  sassc $SASSC_OPT "${SRC_DIR}/main/gtk-4.0/gtk-Dark.scss"                                   "${THEME_DIR}/gtk-4.0/gtk-dark.css"
+  sassc $SASSC_OPT "${SRC_DIR}/main/gtk-4.0/gtk${color:--Dark}.scss"                         "${THEME_DIR}/gtk-4.0/gtk-dark.css"
 
   mkdir -p                                                                                   "${THEME_DIR}/cinnamon"
   sassc $SASSC_OPT "${SRC_DIR}/main/cinnamon/cinnamon${color}.scss"                          "${THEME_DIR}/cinnamon/cinnamon.css"
@@ -226,6 +226,11 @@ while [[ $# -gt 0 ]]; do
     -c|--color)
       shift
       for color in "${@}"; do
+        # `standard` (COLOR_VARIANTS[0], an empty suffix) emits both light and
+        # dark in one theme: gtk.css builds from gtk.scss ($variant: light) and
+        # gtk-dark.css from gtk-Dark.scss ($variant: dark). `light`/`dark` emit
+        # a single palette instead. Prefer `standard` when the theme must switch
+        # between light and dark at runtime (e.g. theme-sync's Zed family).
         case "${color}" in
           standard)
             colors+=("${COLOR_VARIANTS[0]}")
